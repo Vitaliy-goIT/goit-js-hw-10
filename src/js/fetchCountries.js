@@ -4,7 +4,6 @@ export function fetchCountries(name) {
   const request = `https://restcountries.com/v3.1/name/${name}?fields=capital,population,languages,name,flags`;
   return fetch(request)
     .then(r => {
-      console.log(r);
       if (!r.ok) {
         throw Error(r.statusText);
       }
